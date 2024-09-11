@@ -1,5 +1,6 @@
 const { select } = require('@inquirer/prompts')
 const { cadastrarMeta } = require('./metas/cadastar')
+const { listarMetas } = require('./metas/listar')
 
 const iniciar = async () =>{
 
@@ -13,7 +14,15 @@ const iniciar = async () =>{
                     value: "Cadastrar"
                 },
                 {
-            name: "Fechar",
+                    name: "Listar minhas metas",
+                    value: "Listar"
+                },
+                {
+                    name: "Marcar meta(s) como concluida",
+                    value: "Concluida"
+                },
+                {
+                    name: "Fechar",
                     value: "Sair"
                 }
             ]
@@ -22,6 +31,12 @@ const iniciar = async () =>{
         switch(meta){
             case "Cadastrar":
                 await cadastrarMeta()
+            break
+            case "Listar":
+                await listarMetas()
+            break
+            case "Concluida":
+                await ConcluidaVerdadeiro()
             break
             case "Sair":
                 return
