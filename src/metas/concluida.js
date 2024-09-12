@@ -23,6 +23,6 @@ const ConcluidaVerdadeiroOufalse = async () =>{
         meta.checked = true
     })
 
-    console.log("Meta(s) marcadas como concluídas")
+    console.log("Meta(s) marcadas como  concluídas")
 }
 module.exports = {ConcluidaVerdadeiroOufalse}
