@@ -1,6 +1,7 @@
 const { select } = require('@inquirer/prompts')
 const { cadastrarMeta } = require('./metas/cadastar')
 const { listarMetas } = require('./metas/listar')
+const { ConcluidaVerdadeiroOufalse } = require('./metas/concluida')
 
 const iniciar = async () =>{
 
@@ -36,7 +37,7 @@ const iniciar = async () =>{
                 await listarMetas()
             break
             case "Concluida":
-                await ConcluidaVerdadeiro()
+                await ConcluidaVerdadeiroOufalse()
             break
             case "Sair":
                 return
