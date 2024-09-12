@@ -1,10 +1,11 @@
 const { checkbox } = require("@inquirer/prompts")
 const { metas } = require("../data")
+const { mostarMensagem } = require("./mensagem")
 
 const ConcluidaVerdadeiroOufalse = async () =>{
 
     if( metas.length == 0 ){
-        console.log("Não existe meta(s)!")
+        mostarMensagem("Não existe meta(s)!") 
         return
     }
     
@@ -25,6 +26,7 @@ const ConcluidaVerdadeiroOufalse = async () =>{
         meta.checked = true
     })
 
-    console.log("Meta(s) marcadas como  concluídas")
+    mostarMensagem("Meta(s) marcadas como  concluídas") 
+
 }
 module.exports = {ConcluidaVerdadeiroOufalse}

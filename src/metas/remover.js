@@ -1,11 +1,12 @@
 const { checkbox } = require("@inquirer/prompts")
 const { metas } = require("../data")
+const { mostarMensagem } = require("./mensagem")
 
 const removerMetas = async () =>{
 
 
     if(metas.length == 0 ){
-        console.log("Não existe meta(s) cadastradas")
+        mostarMensagem("Não existe meta(s) cadastradas") 
         return
     }
 
@@ -24,7 +25,7 @@ const removerMetas = async () =>{
     
 
     if( resposta.length == 0 ){
-        console.log("Nenhuma meta foi selecionada para remoção.")
+        mostarMensagem("Nenhuma meta foi selecionada para remoção.") 
         return
     }
 
@@ -37,7 +38,6 @@ const removerMetas = async () =>{
             metas.splice(index, 1); 
         }
     })
-
-    console.log("Meta(s) removida(s) com sucesso!")
+    mostarMensagem("Meta(s) removida(s) com sucesso!") 
 }
 module.exports = {removerMetas}

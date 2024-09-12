@@ -4,8 +4,13 @@ const { listarMetas } = require('./metas/listar')
 const { ConcluidaVerdadeiroOufalse } = require('./metas/concluida')
 const { metasConcluidas } = require('./metas/verdadeira')
 const { removerMetas } = require('./metas/remover')
+const { mostarMensagem } = require('./metas/mensagem')
+
 
 const iniciar = async () =>{
+
+
+    mostarMensagem("Bem vindo ao App de metas") 
 
     while(true){
 
@@ -61,7 +66,8 @@ const iniciar = async () =>{
             break
 
             case "Sair":
-                console.log("Até a próxima :)")
+                mostarMensagem("Até a próxima :)") 
+
                 return
         }
 
