@@ -3,6 +3,7 @@ const { cadastrarMeta } = require('./metas/cadastar')
 const { listarMetas } = require('./metas/listar')
 const { ConcluidaVerdadeiroOufalse } = require('./metas/concluida')
 const { metasConcluidas } = require('./metas/verdadeira')
+const { removerMetas } = require('./metas/remover')
 
 const iniciar = async () =>{
 
@@ -28,6 +29,10 @@ const iniciar = async () =>{
                    value: "Verdadeiro"
                 },
                 {
+                   name: "Remover Meta(s)",
+                   value: "Remover"
+                },
+                {
                     name: "Fechar",
                     value: "Sair"
                 }
@@ -38,18 +43,28 @@ const iniciar = async () =>{
             case "Cadastrar":
                 await cadastrarMeta()
             break
+
             case "Listar":
                 await listarMetas()
             break
+
             case "Concluida":
                 await ConcluidaVerdadeiroOufalse()
             break
+
             case "Verdadeiro":
                 await metasConcluidas()
             break
+
+            case "Remover":
+                await removerMetas()
+            break
+
             case "Sair":
+                console.log("Até a próxima :)")
                 return
         }
+
 
 
     }

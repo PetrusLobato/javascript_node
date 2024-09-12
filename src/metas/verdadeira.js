@@ -4,7 +4,7 @@ const { metas } = require("../data")
 
 const metasConcluidas = async () =>{
     
-    const resultado = metas.filter((c)=> {return c.checked == true})
+    const resultado = metas.filter((c)=> {return c.checked})
 
     if(resultado.length == 0){
         console.log("Não existe meta(s) realizadas! :(")
