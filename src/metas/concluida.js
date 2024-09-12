@@ -1,6 +1,7 @@
 const { checkbox } = require("@inquirer/prompts")
-const { metas } = require("../data")
 const { mostarMensagem } = require("./mensagem")
+const { metas, saveMetas } = require("../data")
+
 
 const ConcluidaVerdadeiroOufalse = async () =>{
 
@@ -26,6 +27,7 @@ const ConcluidaVerdadeiroOufalse = async () =>{
         meta.checked = true
     })
 
+    saveMetas()
     mostarMensagem("Meta(s) marcadas como  concluídas") 
 
 }

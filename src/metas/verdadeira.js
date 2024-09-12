@@ -1,7 +1,8 @@
-
 const { select } = require("@inquirer/prompts")
-const { metas } = require("../data")
 const { mostarMensagem } = require("./mensagem")
+const { metas, saveMetas } = require("../data")
+
+
 
 const metasConcluidas = async () =>{
     
@@ -16,6 +17,6 @@ const metasConcluidas = async () =>{
         message: "Meta(s) realizadas",
         choices: [...resultado]
     })
-   
+    saveMetas()
 }
 module.exports = {metasConcluidas}

@@ -1,6 +1,5 @@
 const { input, prompts } = require("@inquirer/prompts")
-const { metas } = require("../data")
-const { mostarMensagem } = require("./mensagem")
+const { metas, saveMetas } = require("../data")
 
 const cadastrarMeta = async () =>{
     
@@ -17,7 +16,6 @@ const cadastrarMeta = async () =>{
         checked: false
     })
 
-    mostarMensagem("Meta cadastrada com sucesso!") 
-
+    saveMetas()
 }
 module.exports = {cadastrarMeta}

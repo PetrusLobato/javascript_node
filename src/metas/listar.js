@@ -1,5 +1,5 @@
 const { select } = require("@inquirer/prompts")
-const { metas } = require("../data")
+const { metas, saveMetas } = require("../data")
 
 const listarMetas = async () =>{
 
@@ -13,7 +13,7 @@ const listarMetas = async () =>{
         choices: [...metas]
     })
 
-    
+    saveMetas()
 
 }
 module.exports = {listarMetas}

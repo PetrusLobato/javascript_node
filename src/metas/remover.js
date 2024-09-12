@@ -1,6 +1,8 @@
 const { checkbox } = require("@inquirer/prompts")
-const { metas } = require("../data")
 const { mostarMensagem } = require("./mensagem")
+const { metas, saveMetas } = require("../data")
+
+
 
 const removerMetas = async () =>{
 
@@ -38,6 +40,8 @@ const removerMetas = async () =>{
             metas.splice(index, 1); 
         }
     })
+
+    saveMetas()
     mostarMensagem("Meta(s) removida(s) com sucesso!") 
 }
 module.exports = {removerMetas}

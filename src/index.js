@@ -7,10 +7,14 @@ const { removerMetas } = require('./metas/remover')
 const { mostarMensagem } = require('./metas/mensagem')
 
 
+
 const iniciar = async () =>{
 
 
     mostarMensagem("Bem vindo ao App de metas") 
+    
+   
+
 
     while(true){
 
@@ -74,7 +78,8 @@ const iniciar = async () =>{
 
 
     }
-
+   
+    
 
 }
 iniciar()
