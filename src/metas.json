@@ -1,6 +1,22 @@
 [
   {
     "value": "caminhar",
-    "checked": true
+    "checked": false
+  },
+  {
+    "value": "correr",
+    "checked": false
+  },
+  {
+    "value": "correr",
+    "checked": false
+  },
+  {
+    "value": "caminahr",
+    "checked": false
+  },
+  {
+    "value": "correr",
+    "checked": false
   }
 ]
